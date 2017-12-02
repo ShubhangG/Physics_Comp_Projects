@@ -1,0 +1,9 @@
+3
+INITSTATE FILE inputvec
+H 2
+CP 1 2 1.5708
+H 1
+CP 0 2 0.7854
+CP 0 1 1.5708
+H 0
+Measure
