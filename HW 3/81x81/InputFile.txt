@@ -1,0 +1,4 @@
+beta=1.25
+Lx=81
+Ly=81
+outFile=out_1.25

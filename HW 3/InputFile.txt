@@ -1,0 +1,4 @@
+beta=0.4
+Lx=3
+Ly=3
+outFile=out_0.4

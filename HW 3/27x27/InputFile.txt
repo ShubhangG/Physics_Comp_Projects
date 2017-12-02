@@ -1,0 +1,4 @@
+beta=0.2
+Lx=27
+Ly=27
+outFile=out_0.2
