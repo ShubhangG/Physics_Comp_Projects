@@ -1,0 +1,72 @@
+// Example program
+#include <iostream>
+#include <string>
+
+enum state {coffee,cream, none};
+
+class cell{
+	int posx;
+	int posy;
+	state curr;
+public:
+	cell();
+	cell(int, int, state); 	    //Create cell at position (x,y)
+	void update_pos(int, int);	//Update position of cell
+	void update_state(state);	//Update state of cell
+	int* pos();
+	state stout();	
+	
+};
+
+cell::cell(): posx(-1), posy(-2), curr(none)  {}
+
+void cell::update_pos(int x, int y)
+{   posx = x;
+    posy = y;
+}
+void cell::update_state(state a)
+{   curr = a;
+}
+int* cell::pos()
+{   int* positions = new int[2];
+    positions[0] = posx;
+    positions[1] = posy;
+    return positions;
+}
+state cell::stout()
+{   return curr;
+}
+cell::cell(int x, int y, state r): posx(x), posy(y), curr(r){}
+
+cell* setup(int boxlen)
+{  cell* grid = new cell[boxlen*boxlen];
+	for(int i=0;i<boxlen;i++)
+	{	for(int j=0;j<boxlen;j++)
+		{	grid[i+j*boxlen].update_pos(i,j);
+			if(i<boxlen/2)
+				grid[i+j*boxlen].update_state(cream);
+			else
+				grid[i+j*boxlen].update_state(coffee);
+
+		}
+	}
+
+	return grid;
+}
+
+int main()
+{    std::cout<<"Yooo!";
+     std::cout<<"\nBruh add the boxlen bruh: ";
+     int boxlen;
+     std::cin>>boxlen;
+     std::cout<<"\nThanks Bruh!\n";
+     cell* grid = setup(boxlen);
+    //  std::cout<< grid[0].pos()[0]<<", "<< grid[0].pos()[1]<<"  "<<grid[0].stout()<<"\n";
+    //  std::cout<< grid[1].pos()[0]<<", "<< grid[1].pos()[1]<<"  "<<grid[1].stout()<<"\n";
+    //  std::cout<< grid[2].pos()[0]<<", "<< grid[2].pos()[1]<<"  "<<grid[2].stout()<<"\n";
+    //  std::cout<< grid[3].pos()[0]<<", "<< grid[3].pos()[1]<<"  "<<grid[3].stout()<<"\n";
+    
+    
+     
+     return 0;
+}
