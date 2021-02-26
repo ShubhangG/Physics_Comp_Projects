@@ -2,6 +2,8 @@
 These are my computational physics projects, which include simulations, Metropolis, Ising model etc.
 These were part of the class PHYS 498 Computation in Physics (hence the private repo), a rigourous project based course. The course website is: https://courses.physics.illinois.edu/phys498cmp/fa2017/
 
+PLEASE CONTACT ME IF YOU PLAN TO USE ANY PART OF THIS CODE. 
+
 Folder names and their project description is as follows
 HW 1: It is a coffee mixing, we follow the paper https://arxiv.org/pdf/1405.6903.pdf
 
